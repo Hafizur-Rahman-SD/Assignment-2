@@ -1,0 +1,716 @@
+
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+    background-color: #1a0b2e;
+    color: #ffffff;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+button {
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* Navigation Header */
+
+
+.header {
+    padding: 20px 0;
+    position: relative;
+    z-index: 100;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* Logo with gradient effect - Tech in white, Wave in pink */
+.logo a {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+
+.logo span {
+    color: #ff006e;
+    background: linear-gradient(135deg, #ff006e 0%, #ff5ca1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* Desktop navigation menu centered */
+.nav-menu {
+    display: flex;
+    gap: 40px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
+.nav-link {
+    color: #b8b8d1;
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+
+/* Subscribe button with gradient */
+.btn-subscribe {
+    background: linear-gradient(135deg, #ff006e 0%, #ff5ca1 100%);
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.btn-subscribe:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 0, 110, 0.4);
+}
+
+
+/* Hamburger menu hidden on desktop */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+
+/* 
+   Hero/Banner Section
+    */
+
+
+.hero-section {
+    padding: 80px 0 100px;
+    text-align: center;
+    position: relative;
+    background: linear-gradient(180deg, #1a0b2e 0%, #2d1b4e 100%);
+}
+
+
+/* Soundwave background animation */
+.soundwave-bg {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    height: 120px;
+    background: url('../assets/hero-bg.png') center/cover no-repeat;
+    opacity: 0.3;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.5; }
+}
+
+
+/* Podcast circle with gradient and animation */
+.podcast-circle {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto 40px;
+    animation: float 4s ease-in-out infinite;
+}
+
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+
+.podcast-circle img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    filter: drop-shadow(0 20px 40px rgba(255, 0, 110, 0.4));
+}
+
+
+/* New badge positioning on top right */
+.new-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #00ff88;
+    color: #1a0b2e;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+
+/* Hero title */
+.hero-title {
+    font-size: 56px;
+    font-weight: 800;
+    margin-bottom: 16px;
+    background: linear-gradient(135deg, #ffffff 0%, #ff5ca1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* Hero description */
+.hero-description {
+    font-size: 18px;
+    color: #b8b8d1;
+    margin-bottom: 36px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Hero action buttons */
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.btn-primary {
+    background: linear-gradient(135deg, #ff006e 0%, #ff5ca1 100%);
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: transform 0.3s ease;
+}
+
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+}
+
+
+.btn-secondary {
+    background: transparent;
+    color: #ffffff;
+    padding: 14px 32px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    border: 2px solid #00ff88;
+    transition: all 0.3s ease;
+}
+
+
+.btn-secondary:hover {
+    background: #00ff88;
+    color: #1a0b2e;
+}
+
+
+/* About Section */
+
+
+.about-section {
+    padding: 100px 0;
+    background-color: #1a0b2e;
+}
+
+
+.section-title {
+    font-size: 42px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+
+.about-text {
+    text-align: center;
+    font-size: 16px;
+    color: #b8b8d1;
+    max-width: 900px;
+    margin: 0 auto 16px;
+    line-height: 1.7;
+}
+
+
+.about-text-sub {
+    text-align: center;
+    font-size: 16px;
+    color: #b8b8d1;
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+
+/* Statistics grid - 4 columns on desktop */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+}
+
+
+.stat-card {
+    text-align: center;
+}
+
+
+.stat-number {
+    font-size: 48px;
+    font-weight: 800;
+    background: linear-gradient(135deg, #00ff88 0%, #00d4ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+
+.stat-label {
+    font-size: 12px;
+    color: #b8b8d1;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+
+/* Why Choose Section */
+
+
+.why-choose-section {
+    padding: 100px 0;
+    background-color: #16082a;
+}
+
+
+/* Features grid with 5 cards - specific layout */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+
+/* First row has 2 cards, second row has 3 cards */
+.features-grid .feature-card:nth-child(1) {
+    grid-column: 1 / 2;
+}
+
+
+.features-grid .feature-card:nth-child(2) {
+    grid-column: 2 / 4;
+}
+
+
+.features-grid .feature-card:nth-child(3),
+.features-grid .feature-card:nth-child(4),
+.features-grid .feature-card:nth-child(5) {
+    grid-column: span 1;
+}
+
+
+.feature-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 36px 28px;
+    transition: all 0.3s ease;
+}
+
+
+.feature-card:hover {
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 0, 110, 0.3);
+    transform: translateY(-4px);
+}
+
+
+.feature-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+
+.feature-icon img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(0) invert(1);
+}
+
+
+.feature-title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+
+.feature-desc {
+    font-size: 14px;
+    color: #b8b8d1;
+    line-height: 1.6;
+}
+
+
+/* 
+   Episodes Section
+    */
+
+
+.episodes-section {
+    padding: 100px 0;
+    background-color: #1a0b2e;
+}
+
+
+/* 3 episode cards grid */
+.episodes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+}
+
+
+.episode-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+
+.episode-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(255, 0, 110, 0.3);
+}
+
+
+/* Episode thumbnail with play button overlay */
+.episode-thumbnail {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+
+
+.episode-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.play-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.3s ease;
+}
+
+
+.play-btn-link:hover .play-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+.play-button {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #ff006e 0%, #ff5ca1 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: #ffffff;
+    transition: transform 0.3s ease;
+}
+
+
+.play-btn-link:hover .play-button {
+    transform: scale(1.1);
+}
+
+
+/* Episode info section */
+.episode-info {
+    padding: 24px;
+}
+
+
+.episode-title {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+
+.episode-desc {
+    font-size: 14px;
+    color: #b8b8d1;
+    margin-bottom: 16px;
+    line-height: 1.6;
+}
+
+
+.episode-duration {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #00ff88;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+.episode-duration img {
+    width: 16px;
+    height: 16px;
+}
+
+
+/* 
+   Host Section
+    */
+
+
+.host-section {
+    padding: 100px 0;
+    background-color: #16082a;
+}
+
+
+.host-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: 60px;
+}
+
+
+/* Host image on left */
+.host-image {
+    flex: 0 0 280px;
+}
+
+
+.host-image img {
+    width: 100%;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 0, 110, 0.3);
+}
+
+
+/* Host info on right */
+.host-info {
+    flex: 1;
+}
+
+
+.host-name {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+
+.host-bio {
+    font-size: 16px;
+    color: #b8b8d1;
+    line-height: 1.7;
+    margin-bottom: 28px;
+}
+
+
+/* Social media icons */
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+
+.social-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+
+.social-icon:hover {
+    background: linear-gradient(135deg, #ff006e 0%, #ff5ca1 100%);
+    border-color: transparent;
+    transform: translateY(-2px);
+}
+
+
+.social-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/*Footer Section */
+
+
+.footer {
+    padding: 80px 0 40px;
+    background: linear-gradient(180deg, #1a0b2e 0%, #0d0520 100%);
+    position: relative;
+}
+
+
+/* Soundwave decoration in footer */
+.footer-soundwave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+    background: url('../assets/hero-bg.png') center/cover no-repeat;
+    opacity: 0.1;
+}
+
+
+.footer-brand {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+
+.footer-logo {
+    font-size: 36px;
+    font-weight: 800;
+    color: #ffffff;
+}
+
+
+.footer-logo span {
+    color: #ff006e;
+    background: linear-gradient(135deg, #ff006e 0%, #ff5ca1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+
+/* Platform links */
+.footer-platforms {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin-bottom: 40px;
+}
+
+
+.platform-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #b8b8d1;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+
+.platform-link:hover {
+    color: #ffffff;
+}
+
+
+.platform-link img {
+    width: 20px;
+    height: 20px;
+}
+
+
+/* Copyright */
+.footer-copyright {
+    text-align: center;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+
+.footer-copyright p {
+    font-size: 14px;
+    color: #6b6b8d;
+}
+
+
+
+
+
+
+
