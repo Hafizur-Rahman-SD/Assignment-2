@@ -166,6 +166,7 @@ img {
     height: 280px;
     margin: 0 auto 40px;
     animation: float 4s ease-in-out infinite;
+
 }
 
 
@@ -173,7 +174,14 @@ img {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-15px); }
 }
-
+.microphone-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    transform: translate(-50%, -50%);
+}
 
 .podcast-circle img {
     width: 100%;
@@ -212,7 +220,7 @@ img {
 
 /* Hero description */
 .hero-description {
-    font-size: 18px;
+    font-size: 20px;
     color: #b8b8d1;
     margin-bottom: 36px;
     max-width: 600px;
